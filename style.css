@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;/* full viewport height */
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+#form{
+    display: flex;
+    background-color: rgb(53, 58, 57);
+    height:400px;
+    width:150px;
+    justify-content:center;
+    border: 2px;
+    border-style: dotted;
+    align-items: center;
+    position: relative;
+}
+#red{
+    position: absolute;
+    border: 4px;
+    border-radius: 50px;
+    background-color: red;
+    border-style: double;
+    height: 100px;
+    width: 100px;
+    align-self:flex-start;}
+#green{
+    border: 4px;
+    border-radius: 50px;
+    background-color: green;
+    border-style: double;
+    height: 100px;
+    width: 100px;
+    align-self: flex-end;
+    position: absolute;
+}
+#yellow{
+    border: 4px;
+    border-radius: 50px;
+    background-color: yellow;
+    border-style: double;
+    height: 100px;
+    width: 100px;
+}
+
+#red:hover {
+    animation-name: red;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s; 
+    animation-iteration-count: 1; 
+}
+
+#green:hover {
+    animation-name: red;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s; /* Remove delay for immediate effect */
+    animation-iteration-count: 1; /* Change to 1 for a single animation */
+} #yellow:hover {
+    animation-name: red;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s; /* Remove delay for immediate effect */
+    animation-iteration-count: 1; /* Change to 1 for a single animation */
+}
+
+@keyframes red {
+    0% { background-color: red; }
+    33% { background-color: green; }
+    66% { background-color: yellow; }
+    100% { background-color: blue; }
+}
